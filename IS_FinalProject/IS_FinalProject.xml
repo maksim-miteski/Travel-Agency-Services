@@ -1,0 +1,468 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IS_FinalProject</name>
+    </assembly>
+    <members>
+        <member name="T:IS_FinalProject.Controllers.AgentController">
+            <summary>
+            Agent API Controller
+            </summary>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.AgentController.#ctor(TravelAgency.Services.Abstraction.IAgentService)">
+            <summary>
+            Agent Constructor API Controller
+            </summary>
+            <param name="service">Agent Service</param>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.AgentController.GetAgent(System.Int32)">
+            <summary>
+            Get Agent By Id
+            </summary>
+            <remarks>
+            Sample request:
+            
+              GET /api/Agents/{id}
+            
+            </remarks>
+            <param name="id">Identifier of the item</param>
+            <returns>An Extended Model Item</returns>
+            <response code="200">All went well</response>
+            <response code="204">The item was not Found</response>
+            <response code="400">The Item is null</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.AgentController.GetAllAgents">
+            <summary>
+            Get AllAgent
+            </summary>
+            <remarks>
+            Sample request:
+            
+              GET /api/Agents
+            
+            </remarks>
+            <returns>An Base Model Item</returns>
+            <response code="200">All went well</response>
+            <response code="204">The item was not Found</response>
+            <response code="400">The Item is null</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.AgentController.Post(TravelAgency.Models.Models.Agent.AgentCreateModel)">
+            <summary>
+            Create an Item
+            </summary>
+            <remarks>
+            Sample request:
+            
+              POST /api/Agent
+              {
+               "Name":"string",
+               "LastName":"string",
+               "Title":"string",
+               "DoB":"2021-01-01T12:03:32.3445Z"
+              }
+            
+            </remarks>
+            <param name="model">Model to Create</param>
+            <returns>Identifier of the created item</returns>
+            <response code="201">Path of the created item</response>
+            <response code="405">Method not allowed</response>
+            <response code="400">The Item is null</response>
+            <response code="409">The Item was not created</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.AgentController.Put(System.Int32,TravelAgency.Models.Models.Agent.AgentUpdateModel)">
+            <summary>
+            Update an Item
+            </summary>
+            <remarks>
+            Sample request:
+            
+              PUT /api/Agent/{id}
+              {
+               "Id":1,
+               "Name":"string",
+               "LastName":"string",
+               "Title":"string",
+               "DoB":"2021-01-01T12:03:32.3445Z"
+              }
+            
+            </remarks>
+            <param name="id">identifier of the item</param>
+            <param name="model">model to update</param>
+            <returns>player base model</returns>
+            <response code="200">All went Well!</response>
+            <response code="405">Method not allowed</response>
+            <response code="400">The Item is null</response>
+            <response code="409">The Item was not created</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.AgentController.Delete(System.Int32)">
+             <summary>
+             Delete an Item
+             </summary>
+             <remarks>
+             Sample request:
+             
+               DELETE /api/Agent/{id}
+            
+             </remarks>
+             <param name="id">identifier of the item</param>
+             <returns>bool</returns>
+             <response code="200">All went Well!</response>
+             <response code="405">Method not allowed</response>
+             <response code="400">The Item is null</response>
+             <response code="500">Server side error</response>
+        </member>
+        <member name="T:IS_FinalProject.Controllers.AirplaneController">
+            <summary>
+            Airplane API Controller
+            </summary>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.AirplaneController.#ctor(TravelAgency.Services.Abstraction.IAirplaneService)">
+            <summary>
+            Airplane Constructor API Controller
+            </summary>
+            <param name="service">Airplane Service</param>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.AirplaneController.GetAirplane(System.Int32)">
+            <summary>
+            Get Airplane By Id
+            </summary>
+            <remarks>
+            Sample request:
+            
+              GET /api/Airplanes/{id}
+            
+            </remarks>
+            <param name="id">Identifier of the item</param>
+            <returns>An Extended Model Item</returns>
+            <response code="200">All went well</response>
+            <response code="204">The item was not Found</response>
+            <response code="400">The Item is null</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.AirplaneController.GetAllAirplanes">
+            <summary>
+            Get AllAirplanes
+            </summary>
+            <remarks>
+            Sample request:
+            
+              GET /api/Airplanes
+            
+            </remarks>
+            <returns>An Base Model Item</returns>
+            <response code="200">All went well</response>
+            <response code="204">The item was not Found</response>
+            <response code="400">The Item is null</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.AirplaneController.Post(TravelAgency.Models.Models.Airplane.AirplaneModelCreate)">
+            <summary>
+            Create an Item
+            </summary>
+            <remarks>
+            Sample request:
+            
+              POST /api/Airplane
+              {
+               "FlightNumber":111,
+               "maxCapacity":120
+              }
+            
+            </remarks>
+            <param name="model">Model to Create</param>
+            <returns>Identifier of the created item</returns>
+            <response code="201">Path of the created item</response>
+            <response code="405">Method not allowed</response>
+            <response code="400">The Item is null</response>
+            <response code="409">The Item was not created</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.AirplaneController.Put(System.Int32,TravelAgency.Models.Models.Airplane.AirplaneModelUpdate)">
+            <summary>
+            Update an Item
+            </summary>
+            <remarks>
+            Sample request:
+            
+              PUT /api/Airplane/{id}
+              {
+               "Id":1,
+               "FlightNumber":111,
+               "maxCapacity":120
+              }
+            
+            </remarks>
+            <param name="id">identifier of the item</param>
+            <param name="model">model to update</param>
+            <returns>Airplane base model</returns>
+            <response code="200">All went Well!</response>
+            <response code="405">Method not allowed</response>
+            <response code="400">The Item is null</response>
+            <response code="409">The Item was not created</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.AirplaneController.Delete(System.Int32)">
+             <summary>
+             Delete an Item
+             </summary>
+             <remarks>
+             Sample request:
+             
+               DELETE /api/Airplane/{id}
+            
+             </remarks>
+             <param name="id">identifier of the item</param>
+             <returns>bool</returns>
+             <response code="200">All went Well!</response>
+             <response code="405">Method not allowed</response>
+             <response code="400">The Item is null</response>
+             <response code="500">Server side error</response>
+        </member>
+        <member name="T:IS_FinalProject.Controllers.DestinationController">
+            <summary>
+            Destination API Controller
+            </summary>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.DestinationController.#ctor(TravelAgency.Services.Abstraction.IDestinationService)">
+            <summary>
+            Destination Constructor API Controller
+            </summary>
+            <param name="service">Destination Service</param>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.DestinationController.GetAgents(System.Int32)">
+            <summary>
+            Get Agent By Id
+            </summary>
+            <remarks>
+            Sample request:
+            
+              GET /api/Agent/{id}
+            
+            </remarks>
+            <param name="id">Identifier of the item</param>
+            <returns>An Extended Model Item</returns>
+            <response code="200">All went well</response>
+            <response code="204">The item was not Found</response>
+            <response code="400">The Item is null</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.DestinationController.GetAirplanes(System.Int32)">
+            <summary>
+            Get Airplanes By Id
+            </summary>
+            <remarks>
+            Sample request:
+            
+              GET /api/Airplanes/{id}
+            
+            </remarks>
+            <param name="id">Identifier of the item</param>
+            <returns>An Extended Model Item</returns>
+            <response code="200">All went well</response>
+            <response code="204">The item was not Found</response>
+            <response code="400">The Item is null</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.DestinationController.GetPassengers(System.Int32)">
+            <summary>
+            Get Passenger By Id
+            </summary>
+            <remarks>
+            Sample request:
+            
+              GET /api/Passengers/{id}
+            
+            </remarks>
+            <param name="id">Identifier of the item</param>
+            <returns>An Extended Model Item</returns>
+            <response code="200">All went well</response>
+            <response code="204">The item was not Found</response>
+            <response code="400">The Item is null</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.DestinationController.Post(TravelAgency.Models.Models.Destination.DestinationModelCreate)">
+            <summary>
+            Create an Item
+            </summary>
+            <remarks>
+            Sample request:
+            
+              POST /api/Destination
+              {
+               "PassportNumber":1234567,
+               "departureDate":"2021-01-01T12:03:32.3445Z",
+               "AgentId":1,
+               "PassengerId":1,
+               "AirplaneId":1
+              }
+            
+            </remarks>
+            <param name="model">Model to Create</param>
+            <returns>Identifier of the created item</returns>
+            <response code="201">Path of the created item</response>
+            <response code="405">Method not allowed</response>
+            <response code="400">The Item is null</response>
+            <response code="409">The Item was not created</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.DestinationController.Put(System.Int32,TravelAgency.Models.Models.Destination.DestinationModelUpdate)">
+            <summary>
+            Update an Item
+            </summary>
+            <remarks>
+            Sample request:
+            
+              PUT /api/Destination/{id}
+              {
+               "Id":1,
+               "PassportNumber":1234567,
+               "departureDate":"2021-01-01T12:03:32.3445Z",
+               "AgentId":1,
+               "PassengerId":1,
+               "AirplaneId":1
+              }
+            
+            </remarks>
+            <param name="id">identifier of the item</param>
+            <param name="model">model to update</param>
+            <returns>Airplane base model</returns>
+            <response code="200">All went Well!</response>
+            <response code="405">Method not allowed</response>
+            <response code="400">The Item is null</response>
+            <response code="409">The Item was not created</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.DestinationController.Delete(System.Int32)">
+             <summary>
+             Delete an Item
+             </summary>
+             <remarks>
+             Sample request:
+             
+               DELETE /api/Destination/{id}
+            
+             </remarks>
+             <param name="id">identifier of the item</param>
+             <returns>bool</returns>
+             <response code="200">All went Well!</response>
+             <response code="405">Method not allowed</response>
+             <response code="400">The Item is null</response>
+             <response code="500">Server side error</response>
+        </member>
+        <member name="T:IS_FinalProject.Controllers.PassengerController">
+            <summary>
+            Passenger API Controller
+            </summary>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.PassengerController.#ctor(TravelAgency.Services.Abstraction.IPassengerService)">
+            <summary>
+            Passenger Constructor API Controller
+            </summary>
+            <param name="service">Passenger Service</param>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.PassengerController.GetPassenger(System.Int32)">
+            <summary>
+            Get Passenger By Id
+            </summary>
+            <remarks>
+            Sample request:
+            
+              GET /api/Passengers/{id}
+            
+            </remarks>
+            <param name="id">Identifier of the item</param>
+            <returns>An Extended Model Item</returns>
+            <response code="200">All went well</response>
+            <response code="204">The item was not Found</response>
+            <response code="400">The Item is null</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.PassengerController.GetAllPassengers">
+            <summary>
+            Get AllPassengers
+            </summary>
+            <remarks>
+            Sample request:
+            
+              GET /api/Passengers
+            
+            </remarks>
+            <returns>An Base Model Item</returns>
+            <response code="200">All went well</response>
+            <response code="204">The item was not Found</response>
+            <response code="400">The Item is null</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.PassengerController.Post(TravelAgency.Models.Models.Passenger.PassengerModelCreate)">
+            <summary>
+            Create an Item
+            </summary>
+            <remarks>
+            Sample request:
+            
+              POST /api/Passenger
+              {
+               "Name":"string",
+               "LastName":"string",
+               "PassportNumber":1234567,
+               "DoB":"2021-01-01T12:03:32.3445Z"
+              }
+            
+            </remarks>
+            <param name="model">Model to Create</param>
+            <returns>Identifier of the created item</returns>
+            <response code="201">Path of the created item</response>
+            <response code="405">Method not allowed</response>
+            <response code="400">The Item is null</response>
+            <response code="409">The Item was not created</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.PassengerController.Put(System.Int32,TravelAgency.Models.Models.Passenger.PassengerModelUpdate)">
+            <summary>
+            Update an Item
+            </summary>
+            <remarks>
+            Sample request:
+            
+              PUT /api/Airplane/{id}
+              {
+               "Id":1,
+               "Name":"string",
+               "LastName":"string",
+               "PassportNumber":1234567,
+               "DoB":"2021-01-01T12:03:32.3445Z"
+              }
+            
+            </remarks>
+            <param name="id">identifier of the item</param>
+            <param name="model">model to update</param>
+            <returns>Airplane base model</returns>
+            <response code="200">All went Well!</response>
+            <response code="405">Method not allowed</response>
+            <response code="400">The Item is null</response>
+            <response code="409">The Item was not created</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:IS_FinalProject.Controllers.PassengerController.Delete(System.Int32)">
+             <summary>
+             Delete an Item
+             </summary>
+             <remarks>
+             Sample request:
+             
+               DELETE /api/Passenger/{id}
+            
+             </remarks>
+             <param name="id">identifier of the item</param>
+             <returns>bool</returns>
+             <response code="200">All went Well!</response>
+             <response code="405">Method not allowed</response>
+             <response code="400">The Item is null</response>
+             <response code="500">Server side error</response>
+        </member>
+    </members>
+</doc>
